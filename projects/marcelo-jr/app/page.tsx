@@ -10,7 +10,7 @@ import ShareButton from "@/components/ui/ShareButton";
 import MapsButton from "@/components/ui/MapsButton";
 
 import Background from "@/components/themes/kids-birthday/Background";
-import SunMascot from "@/components/themes/kids-birthday/SunMascot";
+import Mascot from "@/components/themes/kids-birthday/Mascot";
 
 import { event } from "@/config/event";
 
@@ -21,7 +21,7 @@ export default function Home() {
 
       <Container>
         <Card>
-          <SunMascot />
+          <Mascot />
 
           <Hero title={event.texts.title} subtitle={event.texts.subtitle} />
 

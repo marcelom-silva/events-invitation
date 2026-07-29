@@ -11,6 +11,12 @@
   --lavender: #a99bcb;
   --ink: #4a3f35;
   --card-bg: rgba(255, 255, 255, 0.78);
+
+  --balloon-red: #f4645c;
+  --balloon-yellow: #ffc94d;
+  --balloon-blue: #5fb4e5;
+  --balloon-green: #6fd6a0;
+  --balloon-purple: #b18ce0;
 }
 
 *,
@@ -125,7 +131,7 @@ video {
   }
 }
 
-.mascot-sun {
+.mascot-float {
   animation: bob 6s ease-in-out infinite;
 }
 
@@ -139,9 +145,29 @@ video {
   }
 }
 
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  opacity: 0.8;
+  animation: confetti-float 9s ease-in-out infinite;
+}
+
+@keyframes confetti-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-26px) rotate(180deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cloud,
-  .mascot-sun {
+  .mascot-float,
+  .confetti {
     animation: none;
   }
 }

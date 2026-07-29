@@ -1,10 +1,32 @@
 export default function Background() {
+  const confetti = [
+    { top: "12%", left: "18%", color: "#f4645c", delay: "0s" },
+    { top: "22%", left: "78%", color: "#ffc94d", delay: "-2s" },
+    { top: "38%", left: "8%", color: "#5fb4e5", delay: "-4s" },
+    { top: "55%", left: "88%", color: "#6fd6a0", delay: "-1s" },
+    { top: "70%", left: "22%", color: "#b18ce0", delay: "-3s" },
+    { top: "82%", left: "70%", color: "#f4645c", delay: "-5s" },
+  ];
+
   return (
     <div className="sky-decor" aria-hidden="true">
       <CloudShape className="cloud cloud-a" />
       <CloudShape className="cloud cloud-b" />
       <CloudShape className="cloud cloud-c" />
       <RainbowShape className="absolute -bottom-6 -left-10 w-64 opacity-90" />
+
+      {confetti.map((c, i) => (
+        <span
+          key={i}
+          className="confetti"
+          style={{
+            top: c.top,
+            left: c.left,
+            backgroundColor: c.color,
+            animationDelay: c.delay,
+          }}
+        />
+      ))}
     </div>
   );
 }
@@ -27,7 +49,7 @@ function CloudShape({ className }: { className?: string }) {
 }
 
 function RainbowShape({ className }: { className?: string }) {
-  const bands = ["#f2a65a", "#f7d774", "#8ec9a1", "#7fb8c9", "#a99bcb"];
+  const bands = ["#f4645c", "#ffc94d", "#6fd6a0", "#5fb4e5", "#b18ce0"];
 
   return (
     <svg viewBox="0 0 200 100" className={className} xmlns="http://www.w3.org/2000/svg">
