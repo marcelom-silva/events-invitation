@@ -1,0 +1,6 @@
+﻿Write-Host ""
+Write-Host "Events Invitation"
+Write-Host ""
+Write-Host "Execute uma etapa:"
+Write-Host ""
+Write-Host ".\scripts\steps\step-002.ps1"

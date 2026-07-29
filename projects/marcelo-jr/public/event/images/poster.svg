@@ -1,0 +1,53 @@
+<svg viewBox="0 0 720 1280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bfe3f0" />
+      <stop offset="70%" stop-color="#eaf7f5" />
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="1280" fill="url(#sky)" />
+
+  <!-- clouds -->
+  <g fill="#ffffff" opacity="0.9">
+    <ellipse cx="140" cy="160" rx="110" ry="46" />
+    <ellipse cx="220" cy="130" rx="80" ry="40" />
+    <ellipse cx="580" cy="230" rx="100" ry="42" />
+    <ellipse cx="650" cy="200" rx="70" ry="34" />
+  </g>
+
+  <!-- rainbow -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M 80 1180 A 300 300 0 0 1 680 1180" stroke="#f2a65a" stroke-width="26" />
+    <path d="M 116 1180 A 264 264 0 0 1 644 1180" stroke="#f7d774" stroke-width="26" />
+    <path d="M 152 1180 A 228 228 0 0 1 608 1180" stroke="#8ec9a1" stroke-width="26" />
+    <path d="M 188 1180 A 192 192 0 0 1 572 1180" stroke="#7fb8c9" stroke-width="26" />
+  </g>
+
+  <!-- sun mascot -->
+  <g transform="translate(360 560)">
+    <g fill="#f2a65a">
+      <rect x="-9" y="-210" width="18" height="60" rx="9" />
+      <rect x="-9" y="-210" width="18" height="60" rx="9" transform="rotate(30)" />
+      <rect x="-9" y="-210" width="18" height="60" rx="9" transform="rotate(60)" />
+      <rect x="-9" y="-210" width="18" height="60" rx="9" transform="rotate(90)" />
+      <rect x="-9" y="-210" width="18" height="60" rx="9" transform="rotate(120)" />
+      <rect x="-9" y="-210" width="18" height="60" rx="9" transform="rotate(150)" />
+      <rect x="-9" y="-210" width="18" height="60" rx="9" transform="rotate(180)" />
+      <rect x="-9" y="-210" width="18" height="60" rx="9" transform="rotate(210)" />
+      <rect x="-9" y="-210" width="18" height="60" rx="9" transform="rotate(240)" />
+      <rect x="-9" y="-210" width="18" height="60" rx="9" transform="rotate(270)" />
+      <rect x="-9" y="-210" width="18" height="60" rx="9" transform="rotate(300)" />
+      <rect x="-9" y="-210" width="18" height="60" rx="9" transform="rotate(330)" />
+    </g>
+    <circle r="150" fill="#f7d774" />
+    <circle cx="-55" cy="30" r="22" fill="#f2a65a" opacity="0.55" />
+    <circle cx="55" cy="30" r="22" fill="#f2a65a" opacity="0.55" />
+    <path d="M -70 -20 a 14 14 0 0 1 28 0" stroke="#4a3f35" stroke-width="10" stroke-linecap="round" fill="none" />
+    <path d="M 42 -20 a 14 14 0 0 1 28 0" stroke="#4a3f35" stroke-width="10" stroke-linecap="round" fill="none" />
+    <path d="M -35 55 c 14 20 56 20 70 0" stroke="#4a3f35" stroke-width="10" stroke-linecap="round" fill="none" />
+  </g>
+
+  <text x="360" y="880" text-anchor="middle" font-family="Georgia, serif" font-size="72" fill="#f2a65a">Marcelo Jr.</text>
+  <text x="360" y="950" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#4f9c93">Primeira Volta ao Sol</text>
+</svg>

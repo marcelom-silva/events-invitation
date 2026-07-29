@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+
+  --sky-top: #bfe3f0;
+  --sky-bottom: #eaf7f5;
+  --teal: #4f9c93;
+  --sun-yellow: #f7d774;
+  --sun-orange: #f2a65a;
+  --lavender: #a99bcb;
+  --ink: #4a3f35;
+  --card-bg: rgba(255, 255, 255, 0.78);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body), "Baloo 2", ui-sans-serif, sans-serif;
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 65%);
+  color: var(--ink);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.invite-card {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem 2.25rem;
+  border-radius: 2.5rem;
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 30px 60px -20px rgba(79, 156, 147, 0.35),
+    0 10px 25px -10px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(14px);
+  position: relative;
+  z-index: 5;
+}
+
+.font-display {
+  font-family: var(--font-display), "Caveat", cursive;
+}
+
+.sky-decor {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -10;
+  pointer-events: none;
+}
+
+.cloud {
+  position: absolute;
+  opacity: 0.9;
+  animation: drift 22s ease-in-out infinite;
+}
+
+.cloud-a {
+  top: 6%;
+  left: -10%;
+  width: 220px;
+  animation-duration: 26s;
+}
+
+.cloud-b {
+  top: 14%;
+  right: -12%;
+  width: 180px;
+  animation-duration: 20s;
+  animation-delay: -6s;
+}
+
+.cloud-c {
+  bottom: 8%;
+  left: -8%;
+  width: 200px;
+  animation-duration: 24s;
+  animation-delay: -3s;
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(24px) translateY(-10px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.mascot-sun {
+  animation: bob 6s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cloud,
+  .mascot-sun {
+    animation: none;
+  }
+}
