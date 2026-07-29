@@ -51,6 +51,18 @@ function CloudShape({ className }: { className?: string }) {
 function RainbowShape({ className }: { className?: string }) {
   const bands = ["#f4645c", "#ffc94d", "#6fd6a0", "#5fb4e5", "#b18ce0"];
 
+  // pontos de brilho espalhados sobre o arco (coordenadas fixas, calculadas
+  // em cima do mesmo centro/raio das faixas do arco-íris)
+  const sparkles = [
+    { cx: 26, cy: 58, delay: "0s" },
+    { cx: 100, cy: 15, delay: "-0.6s" },
+    { cx: 174, cy: 58, delay: "-1.2s" },
+    { cx: 70, cy: 48, delay: "-1.8s" },
+    { cx: 130, cy: 48, delay: "-2.4s" },
+    { cx: 93, cy: 61, delay: "-0.3s" },
+    { cx: 107, cy: 61, delay: "-1.5s" },
+  ];
+
   return (
     <svg viewBox="0 0 200 100" className={className} xmlns="http://www.w3.org/2000/svg">
       {bands.map((color, i) => {
@@ -66,6 +78,18 @@ function RainbowShape({ className }: { className?: string }) {
           />
         );
       })}
+
+      {sparkles.map((s, i) => (
+        <circle
+          key={i}
+          cx={s.cx}
+          cy={s.cy}
+          r="2.2"
+          fill="#ffffff"
+          className="sparkle"
+          style={{ animationDelay: s.delay }}
+        />
+      ))}
     </svg>
   );
 }

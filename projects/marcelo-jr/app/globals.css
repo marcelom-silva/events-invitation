@@ -164,10 +164,29 @@ video {
   }
 }
 
+.sparkle {
+  animation: twinkle 2.4s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.6);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cloud,
   .mascot-float,
-  .confetti {
+  .confetti,
+  .sparkle {
     animation: none;
   }
 }

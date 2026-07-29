@@ -47,7 +47,4 @@
     <path d="M 42 -20 a 14 14 0 0 1 28 0" stroke="#4a3f35" stroke-width="10" stroke-linecap="round" fill="none" />
     <path d="M -35 55 c 14 20 56 20 70 0" stroke="#4a3f35" stroke-width="10" stroke-linecap="round" fill="none" />
   </g>
-
-  <text x="360" y="880" text-anchor="middle" font-family="Georgia, serif" font-size="72" fill="#f2a65a">Marcelo Jr.</text>
-  <text x="360" y="950" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#4f9c93">Primeira Volta ao Sol</text>
 </svg>
