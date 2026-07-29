@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import Image from "next/image";
 import { Play, RotateCcw, LucideIcon } from "lucide-react";
 
 type VideoPlayerProps = {
@@ -52,13 +51,10 @@ export default function VideoPlayer({ src, poster, alt }: VideoPlayerProps) {
           onClick={handlePlay}
           className="group relative block w-full"
         >
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element -- SVG poster, ganha nada com otimização do next/image */}
+          <img
             src={poster}
             alt={alt}
-            width={720}
-            height={1280}
-            priority
-            sizes="(max-width: 768px) 100vw, 480px"
             className="aspect-[9/16] w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           <Overlay icon={Play} />
