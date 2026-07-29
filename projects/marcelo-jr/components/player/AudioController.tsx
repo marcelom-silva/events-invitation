@@ -4,12 +4,12 @@ import { useRef, useState } from "react";
 import { Music, VolumeX } from "lucide-react";
 import IconButton from "@/components/ui/IconButton";
 
-type MusicToggleProps = {
+type AudioControllerProps = {
   src: string | null;
   label: string;
 };
 
-export default function MusicToggle({ src, label }: MusicToggleProps) {
+export default function AudioController({ src, label }: AudioControllerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
 

@@ -1,12 +1,13 @@
 import Container from "@/components/layout/Container";
 import Card from "@/components/layout/Card";
-import Hero from "@/components/layout/Hero";
-import ActionBar from "@/components/layout/ActionBar";
 
 import VideoPlayer from "@/components/player/VideoPlayer";
-import MusicToggle from "@/components/player/MusicToggle";
-import ShareButton from "@/components/player/ShareButton";
-import MapsButton from "@/components/player/MapsButton";
+import AudioController from "@/components/player/AudioController";
+
+import Hero from "@/components/ui/Hero";
+import ActionButtons from "@/components/ui/ActionButtons";
+import ShareButton from "@/components/ui/ShareButton";
+import MapsButton from "@/components/ui/MapsButton";
 
 import Background from "@/components/themes/kids-birthday/Background";
 import SunMascot from "@/components/themes/kids-birthday/SunMascot";
@@ -30,8 +31,8 @@ export default function Home() {
             alt={event.texts.title}
           />
 
-          <ActionBar>
-            <MusicToggle
+          <ActionButtons>
+            <AudioController
               src={event.media.music}
               label={event.texts.buttonMusic}
             />
@@ -44,7 +45,7 @@ export default function Home() {
               text={event.texts.shareText}
               label={event.texts.buttonShare}
             />
-          </ActionBar>
+          </ActionButtons>
         </Card>
       </Container>
     </>
