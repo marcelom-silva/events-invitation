@@ -19,6 +19,7 @@ export interface EventTexts {
   buttonMusic: string;
   buttonMaps: string;
   buttonShare: string;
+  buttonRSVP: string;
 }
 
 export interface EventConfig {
@@ -26,4 +27,5 @@ export interface EventConfig {
   texts: EventTexts;
   media: EventMedia;
   location: EventLocation;
+  rsvpUrl: string | null;
 }

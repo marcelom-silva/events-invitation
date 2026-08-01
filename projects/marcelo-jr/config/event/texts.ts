@@ -7,4 +7,5 @@ export const texts: EventTexts = {
   buttonMusic: "Música",
   buttonMaps: "Como chegar",
   buttonShare: "Compartilhar",
+  buttonRSVP: "Confirmar presença",
 };

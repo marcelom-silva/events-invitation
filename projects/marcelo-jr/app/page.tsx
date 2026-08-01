@@ -2,10 +2,10 @@ import Container from "@/components/layout/Container";
 import Card from "@/components/layout/Card";
 
 import VideoPlayer from "@/components/player/VideoPlayer";
-import AudioController from "@/components/player/AudioController";
 
 import Hero from "@/components/ui/Hero";
 import ActionButtons from "@/components/ui/ActionButtons";
+import ConfirmPresenceButton from "@/components/ui/ConfirmPresenceButton";
 import ShareButton from "@/components/ui/ShareButton";
 import MapsButton from "@/components/ui/MapsButton";
 
@@ -32,10 +32,12 @@ export default function Home() {
           />
 
           <ActionButtons>
-            <AudioController
-              src={event.media.music}
-              label={event.texts.buttonMusic}
-            />
+            {event.rsvpUrl && (
+              <ConfirmPresenceButton
+                href={event.rsvpUrl}
+                label={event.texts.buttonRSVP}
+              />
+            )}
             <MapsButton
               href={event.location.mapsUrl}
               label={event.texts.buttonMaps}
